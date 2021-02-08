@@ -1,19 +1,39 @@
+import { compileSolidity } from 'tondev/dist/controllers/solidity/compiler';
+import { Terminal } from 'tondev/dist/core';
 import * as vscode from 'vscode';
-import { SolidityCompileTaskProvider } from './solidity/compile';
-let solidityCompileTaskProvider: vscode.Disposable | undefined;
-export function activate(context: vscode.ExtensionContext) {
-	// let disposable = vscode.commands.registerCommand('tondev.solidity.compile', solidityCompile);
-	// context.subscriptions.push(disposable);
 
-	const workspaceFolders = vscode.workspace.workspaceFolders;
-	if (!workspaceFolders) {
-		return;
+let tonDevOutput: vscode.OutputChannel | undefined;
+function tondevTerminal(): Terminal {
+	if (!tonDevOutput) {
+		tonDevOutput = vscode.window.createOutputChannel("TONDev");
 	}
-		
-	solidityCompileTaskProvider = vscode.tasks.registerTaskProvider(
-		SolidityCompileTaskProvider.TONDev, 
-		new SolidityCompileTaskProvider(),
-	);
+	const output = tonDevOutput;
+	output.show();
+	return {
+		log: (...args: any[]) => {
+			output.appendLine(args.map(x => `${x}`).join(""));
+		},
+		writeError: (text: string) => {
+			output.append(text);
+		},
+		write: (text: string) => {
+			output.append(text);
+		},
+	};
 }
 
-export function deactivate() {}
+async function solCompileCommand(args: any) {
+	const filePath = args?.fsPath ?? vscode.window.activeTextEditor?.document.uri.fsPath;
+	if (!filePath) {
+		vscode.window.showInformationMessage("No file selected");
+		return;
+	}
+	await compileSolidity(tondevTerminal(), { file: filePath });
+}
+
+export function activate(context: vscode.ExtensionContext) {
+	let disposable = vscode.commands.registerCommand('tondev.solCompile', solCompileCommand);
+	context.subscriptions.push(disposable);
+}
+
+export function deactivate() { }

@@ -1,8 +1,9 @@
 {
 	"name": "tondev",
 	"displayName": "TONDev",
-	"description": "FreeTON Development",
-	"version": "0.0.1",
+	"description": "Free TON Development",
+	"publisher": "TONLabs",
+	"version": "0.0.2",
 	"engines": {
 		"vscode": "^1.52.0"
 	},
@@ -10,10 +11,28 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:workbench.action.tasks.runTask"
+		"onCommand:tondev.solCompile"
 	],
 	"main": "./out/extension.js",
+	"repository": {
+		"url": "https://github.com/tonlabs/tondev"
+	},
 	"contributes": {
+		"commands": [
+			{
+				"command": "tondev.solCompile",
+				"title": "Compile Solidity"
+			}
+		],
+		"menus": {
+			"explorer/context": [
+				{
+					"when": "resourceExtname == .sol",
+					"command": "tondev.solCompile",
+					"group": "TONDev"
+				}
+			]
+		},
 		"taskDefinitions": [
 			{
 				"type": "tondev",
