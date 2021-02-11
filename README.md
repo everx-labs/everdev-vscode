@@ -28,7 +28,7 @@ Click on the empty space in Explorer and find `Create Solidity Contract` command
 `View->Command palette->TONDEV: Create Solidity Contract`. 
 
 ### Compile
-Find `Compile Solidity Contract' command in the .sol file context menu or access it from 
+Find `Compile Solidity Contract` command in the .sol file context menu or access it from 
 `View->Command palette->TONDEV: Compile Solidity Contract`
 
 ![Compile Solidity Contract](pics/compile.gif)
