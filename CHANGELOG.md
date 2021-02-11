@@ -1,4 +1,4 @@
-# Change Log
+# Release Notes
 
 All notable changes to the "TONDev" extension will be documented in this file.
 
