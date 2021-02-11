@@ -3,8 +3,8 @@
 Access [TONDEV](https://docs.ton.dev/) Toolkit functionality directly from popular IDE
 
 # Content Table
-
-- [Currently supports](#currently-supports)
+- [Installation](#installation)
+- [Supported operations](#supported-operations)
   - [Solidity](#solidity)
     - [Hello World](#hello-world)
     - [Compile](#compile)
@@ -16,7 +16,10 @@ Access [TONDEV](https://docs.ton.dev/) Toolkit functionality directly from popul
   - [TS4](#ts4)
   - [Network Support](#network-support)
 
-# Currently supports:
+# Installation
+Search for [`TONDev` extention](https://marketplace.visualstudio.com/items?itemName=TONLabs.tondev) in VS Code Marketplace and install it.
+
+# Supported operations:
 ![TONDEV commands](pics/commands.jpg)
 
 ## Solidity
