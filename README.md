@@ -9,3 +9,4 @@ Adds support for TON blockchain development. Supports:
 
 
 ![Demo CountPages alpha](gifs/compile.gif)
+![Demo CountPages alpha](gifs/smallcompile.gif)
