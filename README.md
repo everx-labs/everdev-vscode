@@ -1,12 +1,36 @@
 # TON Development support for Visual Studio Code
 
-Adds support for TON blockchain development. Supports:
+Adds support for Free TON blockchain development. 
 
-- Solidity and C/C++ build tools
-- testing with TS framework and tools
+# Currently supports:
+
+## Solidity
+- `Compile Solidity Contract` 
+![Compile Solidity Contract](gifs/compile.gif)
+
+- create Hello World
+
+## SDK
+- create demo nodejs project 
+
+# Roadmap:
+
+## Solidity
+- support other compilation and linking options
+
+## C/C++ contracts
+- Compile C/C++ contracts
+
+## TS4
+- debug contracts with TS framework and tools
+
+
+
+## Network support
+- connection to main.ton.dev, net.ton.dev and custom network configurations
+- local network
 - deploying to networks
-- operating with TON blockchains including real blockchain networks, NodeSE
+- operating with TON blockchains including real blockchain networks, TONOS SE
 
 
-![Demo CountPages alpha](gifs/compile.gif)
-![Demo CountPages alpha](gifs/smallcompile.gif)
+
