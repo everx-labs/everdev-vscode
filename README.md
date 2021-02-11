@@ -1,17 +1,25 @@
-# TON Development support for Visual Studio Code
+# TONDEV Visual Studio Code plugin
 
-Adds support for Free TON blockchain development. 
-
+Access [TONDEV](https://docs.ton.dev/) Toolkit functionality directly from popular IDE
 # Currently supports:
 
-## Solidity
-- `Compile Solidity Contract` 
-![Compile Solidity Contract](gifs/compile.gif)
+![TONDEV commands](pics/commands.jpg)
 
-- create Hello World
+## Solidity
+### Hello World
+Click on the empty space in Explorer and find `Create Solidity Contract` command or access it from 
+`View->Command palette->TONDEV: Create Solidity Contract`. 
+
+### Compile
+Find `Compile Solidity Contract' command in the .sol file context menu or access it from 
+`View->Command palette->TONDEV: Compile Solidity Contract`
+![Compile Solidity Contract](pics/compile.gif)
+
 
 ## SDK
-- create demo nodejs project 
+### demo nodejs project 
+Click on the empty space in Explorer and find `Create TON JS App` command or access it from 
+`View->Command palette->TONDEV: Create TON JS App`. 
 
 # Roadmap:
 
