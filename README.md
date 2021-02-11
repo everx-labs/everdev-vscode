@@ -1,8 +1,22 @@
 # TONDEV Visual Studio Code plugin
 
 Access [TONDEV](https://docs.ton.dev/) Toolkit functionality directly from popular IDE
-# Currently supports:
 
+# Content Table
+
+- [Currently supports](#currently-supports)
+  - [Solidity](#solidity)
+    - [Hello World](#hello-world)
+    - [Compile](#compile)
+  - [SDK](#sdk)
+    - [demo nodejs project](#demo-nodejs-project)
+- [Roadmap](#roadmap)
+  - [Solidity](#solidity)
+  - [C/C++](#cc)
+  - [TS4](#ts4)
+  - [Network Support](#network-support)
+
+# Currently supports:
 ![TONDEV commands](pics/commands.jpg)
 
 ## Solidity
@@ -16,7 +30,6 @@ Find `Compile Solidity Contract' command in the .sol file context menu or access
 
 ![Compile Solidity Contract](pics/compile.gif)
 
-
 ## SDK
 ### demo nodejs project 
 Click on the empty space in Explorer and find `Create TON JS App` command or access it from 
@@ -27,13 +40,11 @@ Click on the empty space in Explorer and find `Create TON JS App` command or acc
 ## Solidity
 - support other compilation and linking options
 
-## C/C++ contracts
+## C/C++
 - Compile C/C++ contracts
 
 ## TS4
 - debug contracts with TS framework and tools
-
-
 
 ## Network support
 - connection to main.ton.dev, net.ton.dev and custom network configurations
