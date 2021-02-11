@@ -7,8 +7,5 @@ Adds support for TON blockchain development. Supports:
 - deploying to networks
 - operating with TON blockchains including real blockchain networks, NodeSE
 
-## Release Notes
 
-### 0.1.0
-
-Initial release
+![Demo CountPages alpha](gifs/compile.gif)

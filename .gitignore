@@ -107,3 +107,4 @@ dist
 /out/
 /package-lock.json
 /*.vsix
+.DS_Store
