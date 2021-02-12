@@ -20,23 +20,36 @@ Access [TONDEV](https://docs.ton.dev/) Toolkit functionality directly from popul
 Search for [`TONDev` extention](https://marketplace.visualstudio.com/items?itemName=TONLabs.tondev) in VS Code Marketplace and install it.
 
 # Supported operations:
-![TONDEV commands](pics/commands.jpg)
+![TONDEV commands](images/commands.jpg)
 
 ## Solidity
 ### Hello World
 Click on the empty space in Explorer and find `Create Solidity Contract` command or access it from 
-`View->Command palette->TONDEV: Create Solidity Contract`. 
+`View->Command palette->TONDEV: Create Solidity Contract`.
+
+![Create Solidity contract](images/sol_create.jpg)
 
 ### Compile
 Find `Compile Solidity Contract` command in the .sol file context menu or access it from 
 `View->Command palette->TONDEV: Compile Solidity Contract`
 
-![Compile Solidity Contract](pics/compile.gif)
+![Compile Solidity Contract](images/compile.gif)
+
+### Version
+Access this command from 
+`View->Command palette->TONDEV: Show Solidity Version`
+
+### Update
+In case you had some problems with installation or want to pull the latest compiler version use this command.
+Access it from `View->Command palette->TONDEV: Update Solidity Compiler`
+
 
 ## SDK
-### demo nodejs project 
+### Demo nodejs project 
 Click on the empty space in Explorer and find `Create TON JS App` command or access it from 
 `View->Command palette->TONDEV: Create TON JS App`. 
+
+![Create NodeJS project](images/js_create.jpg)
 
 # Roadmap:
 
