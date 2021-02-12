@@ -3,7 +3,7 @@
     "displayName": "TONDev",
     "description": "Free TON Development",
     "publisher": "TONLabs",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "icon": "images/tondev.png",
     "engines": {
         "vscode": "^1.52.0"

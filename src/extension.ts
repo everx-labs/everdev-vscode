@@ -4,12 +4,13 @@ import { Command, CommandArg, Terminal } from 'tondev';
 import * as vscode from 'vscode';
 import * as fs from "fs";
 import * as path from "path";
-
-let _tondevTerminal: Terminal | undefined;
-function tondevTerminal(): Terminal {
+type OutputTerminal = Terminal & { output: vscode.OutputChannel };
+let _tondevTerminal: OutputTerminal | undefined;
+function tondevTerminal(): OutputTerminal {
 	if (!_tondevTerminal) {
 		const output = vscode.window.createOutputChannel("TONDev");
 		_tondevTerminal = {
+			output,
 			log: (...args: any[]) => {
 				output.appendLine(args.map(x => `${x}`).join(""));
 			},
@@ -60,7 +61,13 @@ async function runCommand(command: Command, vscodeArgs: any) {
 		}
 		args[arg.name] = value;
 	}
-	await command.run(tondevTerminal(), args);
+	const terminal = tondevTerminal();
+	terminal.output.show();
+	try {
+		await command.run(tondevTerminal(), args);
+	} catch (err) {
+		terminal.writeError(err.toString());
+	}
 }
 
 export function activate(context: vscode.ExtensionContext) {
