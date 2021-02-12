@@ -29,7 +29,12 @@ Search for [`TONDev` extention](https://marketplace.visualstudio.com/items?itemN
 Click on the empty space in Explorer and find `Create Solidity Contract` command or access it from 
 `View->Command palette->TONDEV: Create Solidity Contract`.
 
-![Create Solidity contract](images/sol_create.jpg)
+![Create Solidity contract](images/sol_create.jpg).
+
+We named the contract `Contract`. After command is finished you will see the source code of hello world contract that you can now compile.
+
+![Created Solidity contract](images/sol_created.jpg).
+
 
 ### Compile
 Find `Compile Solidity Contract` command in the .sol file context menu or access it from 
@@ -52,6 +57,16 @@ Click on the empty space in Explorer and find `Create TON JS App` command or acc
 `View->Command palette->TONDEV: Create TON JS App`. 
 
 ![Create NodeJS project](images/js_create.jpg)
+
+We named our project `demo`. After command is finished you will see package.json with js sdk dependencies 
+and index.js file with client creation, connecting to Developer Network net.ton.dev. 
+
+Client creation:
+![Client creation](images/js_demo.jpg)
+
+Dependencies:
+![Dependencies](images/js_depend.jpg)
+
 
 # Roadmap:
 
