@@ -1,0 +1,98 @@
+{
+    "name": "tondev",
+    "displayName": "TONDev",
+    "description": "Free TON Development",
+    "publisher": "TONLabs",
+    "version": "0.1.4",
+    "icon": "images/tondev.png",
+    "engines": {
+        "vscode": "^1.52.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:tondev.sol.create",
+        "onCommand:tondev.sol.compile",
+        "onCommand:tondev.sol.version",
+        "onCommand:tondev.sol.update",
+        "onCommand:tondev.js.create"
+    ],
+    "main": "./out/extension.js",
+    "repository": {
+        "url": "https://github.com/tonlabs/tondev"
+    },
+    "contributes": {
+        "commands": [
+            {
+                "command": "tondev.sol.create",
+                "category": "TONDev",
+                "title": "Create Solidity Contract"
+            },
+            {
+                "command": "tondev.sol.compile",
+                "category": "TONDev",
+                "title": "Compile Solidity Contract"
+            },
+            {
+                "command": "tondev.sol.version",
+                "category": "TONDev",
+                "title": "Show Solidity Version"
+            },
+            {
+                "command": "tondev.sol.update",
+                "category": "TONDev",
+                "title": "Update Solidity Compiler"
+            },
+            {
+                "command": "tondev.js.create",
+                "category": "TONDev",
+                "title": "Create TON JS App"
+            }
+        ],
+        "menus": {
+            "explorer/context": [
+                {
+                    "when": "explorerResourceIsFolder",
+                    "command": "tondev.sol.create",
+                    "group": "TONDev"
+                },
+                {
+                    "when": "resourceExtname =~ /\\.sol$/i",
+                    "command": "tondev.sol.compile",
+                    "group": "TONDev"
+                },
+                {
+                    "when": "explorerResourceIsFolder",
+                    "command": "tondev.js.create",
+                    "group": "TONDev"
+                }
+            ]
+        }
+    },
+    "scripts": {
+        "prep": "node ./out/prepare_package.js",
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "pretest": "npm run compile && npm run lint",
+        "lint": "eslint src --ext ts",
+        "test": "node ./out/test/runTest.js"
+    },
+    "dependencies": {
+        "tondev": "^0.1.3"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.52.0",
+        "@types/glob": "^7.1.3",
+        "@types/mocha": "^8.0.4",
+        "@types/node": "^12.11.7",
+        "eslint": "^7.15.0",
+        "@typescript-eslint/eslint-plugin": "^4.9.0",
+        "@typescript-eslint/parser": "^4.9.0",
+        "glob": "^7.1.6",
+        "mocha": "^8.1.3",
+        "typescript": "^4.1.2",
+        "vscode-test": "^1.4.1"
+    }
+}
