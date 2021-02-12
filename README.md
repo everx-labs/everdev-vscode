@@ -8,8 +8,10 @@ Access [TONDEV](https://docs.ton.dev/) Toolkit functionality directly from popul
   - [Solidity](#solidity)
     - [Hello World](#hello-world)
     - [Compile](#compile)
+    - [Version](#version)
+    - [Update](#update)
   - [SDK](#sdk)
-    - [demo nodejs project](#demo-nodejs-project)
+    - [Create Demo Project](#create-demo-project)
 - [Roadmap](#roadmap)
   - [Solidity](#solidity)
   - [C/C++](#cc)
@@ -45,7 +47,7 @@ Access it from `View->Command palette->TONDEV: Update Solidity Compiler`
 
 
 ## SDK
-### Demo nodejs project 
+### Create Demo Project 
 Click on the empty space in Explorer and find `Create TON JS App` command or access it from 
 `View->Command palette->TONDEV: Create TON JS App`. 
 
