@@ -59,7 +59,10 @@ Click on the empty space in Explorer and find `Create TON JS App` command or acc
 ![Create NodeJS project](images/js_create.jpg)
 
 We named our project `demo`. After command is finished you will see package.json with js sdk dependencies 
-and index.js file with client creation, connecting to Developer Network net.ton.dev. 
+and index.js file with client creation, connecting to local blockchain [TONOS Startup Edition](https://docs.ton.dev/86757ecb2/p/19d886-ton-os-se). 
+
+To connect to the local blockchain you need to run it. [Find out how to launch it here](https://docs.ton.dev/86757ecb2/p/324b55-installation/t/7337a3).  
+
 
 Client creation:
 ![Client creation](images/js_demo.jpg)
