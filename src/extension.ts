@@ -1,6 +1,6 @@
 import { fstat } from 'fs';
-import { controllers } from 'tondev/dist/controllers';
-import { Command, CommandArg, Terminal } from 'tondev/dist/core';
+import { controllers } from 'tondev';
+import { Command, CommandArg, Terminal } from 'tondev';
 import * as vscode from 'vscode';
 import * as fs from "fs";
 import * as path from "path";
@@ -66,12 +66,10 @@ async function runCommand(command: Command, vscodeArgs: any) {
 export function activate(context: vscode.ExtensionContext) {
 	for (const controller of controllers) {
 		for (const command of controller.commands) {
-			if (controller.name === "sol") {
-				const disposable = vscode.commands.registerCommand(`tondev.${controller.name}.${command.name}`, async (...args: any[]) => {
-					await runCommand(command, args);
-				});
-				context.subscriptions.push(disposable);
-			}
+			const disposable = vscode.commands.registerCommand(`tondev.${controller.name}.${command.name}`, async (...args: any[]) => {
+				await runCommand(command, args);
+			});
+			context.subscriptions.push(disposable);
 		}
 	}
 }

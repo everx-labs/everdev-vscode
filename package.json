@@ -3,7 +3,8 @@
     "displayName": "TONDev",
     "description": "Free TON Development",
     "publisher": "TONLabs",
-    "version": "0.1.0",
+    "version": "0.1.3",
+    "icon": "images/tondev.png",
     "engines": {
         "vscode": "^1.52.0"
     },
@@ -13,6 +14,8 @@
     "activationEvents": [
         "onCommand:tondev.sol.create",
         "onCommand:tondev.sol.compile",
+        "onCommand:tondev.sol.version",
+        "onCommand:tondev.sol.update",
         "onCommand:tondev.js.create"
     ],
     "main": "./out/extension.js",
@@ -32,6 +35,16 @@
                 "title": "Compile Solidity Contract"
             },
             {
+                "command": "tondev.sol.version",
+                "category": "TONDev",
+                "title": "Show Solidity Version"
+            },
+            {
+                "command": "tondev.sol.update",
+                "category": "TONDev",
+                "title": "Update Solidity Compiler"
+            },
+            {
                 "command": "tondev.js.create",
                 "category": "TONDev",
                 "title": "Create TON JS App"
@@ -40,17 +53,17 @@
         "menus": {
             "explorer/context": [
                 {
-                    "when": "resourceExtname == .sol",
+                    "when": "explorerResourceIsFolder",
                     "command": "tondev.sol.create",
                     "group": "TONDev"
                 },
                 {
-                    "when": "resourceExtname == .sol",
+                    "when": "resourceExtname =~ /\\.sol$/i",
                     "command": "tondev.sol.compile",
                     "group": "TONDev"
                 },
                 {
-                    "when": "resourceExtname == .sol",
+                    "when": "explorerResourceIsFolder",
                     "command": "tondev.js.create",
                     "group": "TONDev"
                 }
@@ -58,7 +71,7 @@
         }
     },
     "scripts": {
-        "prepare": "node ./out/prepare_package.js",
+        "prep": "node ./out/prepare_package.js",
         "vscode:prepublish": "npm run compile",
         "compile": "tsc -p ./",
         "watch": "tsc -watch -p ./",
@@ -67,7 +80,7 @@
         "test": "node ./out/test/runTest.js"
     },
     "dependencies": {
-        "tondev": "^0.1.2"
+        "tondev": "^0.1.3"
     },
     "devDependencies": {
         "@types/vscode": "^1.52.0",

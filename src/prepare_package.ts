@@ -1,6 +1,8 @@
 import * as path from "path";
 import * as fs from "fs";
-import { controllers } from "tondev/dist/controllers";
+import { controllers } from "tondev";
+import { getCommandInfo } from "./utils";
+
 const pkg = JSON.parse(fs.readFileSync(path.resolve(__dirname, "..", "package.json"), "utf8"));
 const commands: any[] = [];
 const explorerContext: any[] = [];
@@ -16,11 +18,20 @@ for (const controller of controllers) {
             title: command.title,
         });
         activationEvents.push(`onCommand:${commandName}`);
-        explorerContext.push({
-            when: "resourceExtname == .sol",
-            command: commandName,
-            group: "TONDev",
-        });
+        const { fileArg, folderArg } = getCommandInfo(command);
+        if (fileArg) {
+            explorerContext.push({
+                when: `resourceExtname =~ ${fileArg.nameRegExp.toString()}`,
+                command: commandName,
+                group: "TONDev",
+            });
+        } else if (folderArg) {
+            explorerContext.push({
+                when: "explorerResourceIsFolder",
+                command: commandName,
+                group: "TONDev",
+            });
+        }
     }
 }
 
