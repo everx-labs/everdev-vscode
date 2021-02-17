@@ -1,14 +1,15 @@
 # Release Notes
 
-All notable changes to the "TONDev" extension will be documented in this file.
+All the notable changes to the "TONDEV" VS Code extension will be documented in this file.
 
-## 0.1.0 Feb 12, 2021
+## 0.1.7 Feb 12, 2021
 ### New
 
 - Solidity functionality added: 
-  - create a hello world contract in one click
-  - install compiler in background and compile a contract in one click
-  - get solidity compiler version 
-  - download the latest compiler
+  - Create a hello world contract in one click
+  - Install compiler in the background upon the first request
+  - Compile and link a contract in one click
+  - Get solidity compiler version 
+  - Download the latest compiler
 - SDK functionality added:
-  - create a Node.js project with the latest SDK in dependencies and index.js script with main client object creation
+  - Create a Node.js project with the latest SDK dependencies and index.js script with main client object creation
