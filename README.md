@@ -12,7 +12,7 @@ Access [TONDEV](https://docs.ton.dev/) Toolkit functionality directly from popul
     - [Update](#update)
   - [SDK](#sdk)
     - [Create Demo Project](#create-demo-project)
-- [Roadmap](#roadmap)
+- [Backlog](#roadmap)
   - [Solidity](#solidity)
   - [C/C++](#cc)
   - [TS4](#ts4)
@@ -71,7 +71,7 @@ Dependencies:
 ![Dependencies](images/js_depend.jpg)
 
 
-# Roadmap:
+# Backlog:
 
 ## Solidity
 - support other compilation and linking options
