@@ -6,7 +6,7 @@ Access [TONDEV](https://docs.ton.dev/) Toolkit functionality directly from popul
 - [Installation](#installation)
 - [Supported operations](#supported-operations)
   - [Solidity](#solidity)
-    - [Hello World](#hello-world)
+    - [Create your first contract](#create-your-first-contract)
     - [Compile](#compile)
     - [Version](#version)
     - [Update](#update)
@@ -25,7 +25,9 @@ Search for [`TONDev` extention](https://marketplace.visualstudio.com/items?itemN
 ![TONDEV commands](images/commands.jpg)
 
 ## Solidity
-### Hello World
+### Create your first contract
+This command creates a hello-world Solidity contract with comments that you can observe and compile.
+
 Click on the empty space in Explorer and find `Create Solidity Contract` command or access it from 
 `View->Command palette->TONDEV: Create Solidity Contract`.
 
@@ -37,22 +39,30 @@ We named the contract `Contract`. After command is finished you will see the sou
 
 
 ### Compile
+This command compiles and links a selected Solidity contract. After successful compilation you get .abi.json and .tvc files that you can later [use in your DApps to deploy and call contract methods](https://docs.ton.dev/86757ecb2/p/07f1a5-add-contract-to-your-app-/b/462f33).
+
 Find `Compile Solidity Contract` command in the .sol file context menu or access it from 
 `View->Command palette->TONDEV: Compile Solidity Contract`
 
 ![Compile Solidity Contract](images/compile.gif)
 
 ### Version
+This command shows the currently installed Solidity compiler version.
+
 Access this command from 
 `View->Command palette->TONDEV: Show Solidity Version`
 
 ### Update
+This command updates the compiler to the latest version.
+
 In case you had some problems with installation or want to pull the latest compiler version use this command.
 Access it from `View->Command palette->TONDEV: Update Solidity Compiler`
 
 
 ## SDK
 ### Create Demo Project 
+This command creates a Node.js project with SDK latest dependencies and index.js file with main Client object creation.
+
 Click on the empty space in Explorer and find `Create TON JS App` command or access it from 
 `View->Command palette->TONDEV: Create TON JS App`. 
 
