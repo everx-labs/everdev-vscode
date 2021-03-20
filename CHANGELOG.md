@@ -7,6 +7,7 @@ All the notable changes to the "TONDEV" VS Code extension will be documented in 
 ### New
 
 - Support for TONDEV 0.3.3
+- Command categories looks like "tondev-sol", "tondev-se" etc.
 
 ### Fixed
 
