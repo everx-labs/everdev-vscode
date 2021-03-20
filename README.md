@@ -1,6 +1,6 @@
 # TONDEV Visual Studio Code plugin
 
-Access [TONDEV](https://docs.ton.dev/) Toolkit functionality directly from popular IDE
+Access [TONDEV](https://docs.ton.dev/) Toolkit functionality directly from VS Code IDE with [TONDEV extension](https://marketplace.visualstudio.com/items?itemName=TONLabs.tondev). 
 
 # Content Table
 
