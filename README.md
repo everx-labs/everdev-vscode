@@ -38,7 +38,7 @@ Search for [`TONDev` extention](https://marketplace.visualstudio.com/items?itemN
 
 This command creates a hello-world Solidity contract with comments that you can observe and compile.
 
-Click on the empty space in Explorer and find `Create Solidity Contract` command or access it from 
+Click on the empty space in Explorer and find `Create Solidity Contract` command or access it from
 
 `View->Command palette->TONDEV: Create Solidity Contract`.
 
