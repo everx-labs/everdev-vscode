@@ -14,7 +14,7 @@ for (const controller of controllers) {
         const commandName = `tondev.${controller.name}.${command.name}`;
         commands.push({
             command: commandName,
-            category: "TONDev",
+            category: `tondev-${controller.name}`,
             title: command.title,
         });
         activationEvents.push(`onCommand:${commandName}`);

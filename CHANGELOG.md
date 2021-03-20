@@ -2,11 +2,17 @@
 
 All the notable changes to the "TONDEV" VS Code extension will be documented in this file.
 
-## [0.3.0] 2021-03-20
+## [0.3.3] 2021-03-20
 
 ### New
 
-- Support TONDEV 0.3.3
+- Support for TONDEV 0.3.3
+
+### Fixed
+
+- Parameters that can be an empty string was not accepted.
+- Folder selection was fallen when there was no context folder (now it uses the first workspace folder).
+- Folder selection was fallen when focus was on non file (e.g. output or terminal).
 
 ## [0.1.0] 2021-02-02
 

@@ -3,7 +3,7 @@
     "displayName": "TONDev",
     "description": "Free TON Development",
     "publisher": "TONLabs",
-    "version": "0.3.0",
+    "version": "0.3.3",
     "icon": "images/tondev.png",
     "engines": {
         "vscode": "^1.52.0"
@@ -39,92 +39,92 @@
         "commands": [
             {
                 "command": "tondev.sol.create",
-                "category": "TONDev",
+                "category": "tondev-sol",
                 "title": "Create Solidity Contract"
             },
             {
                 "command": "tondev.sol.compile",
-                "category": "TONDev",
+                "category": "tondev-sol",
                 "title": "Compile Solidity Contract"
             },
             {
                 "command": "tondev.sol.version",
-                "category": "TONDev",
+                "category": "tondev-sol",
                 "title": "Show Solidity Version"
             },
             {
                 "command": "tondev.sol.set",
-                "category": "TONDev",
+                "category": "tondev-sol",
                 "title": "Change Solidity Config"
             },
             {
                 "command": "tondev.sol.update",
-                "category": "TONDev",
+                "category": "tondev-sol",
                 "title": "Update Solidity Compiler"
             },
             {
                 "command": "tondev.js.create",
-                "category": "TONDev",
+                "category": "tondev-js",
                 "title": "Create FreeTON JS App"
             },
             {
                 "command": "tondev.js.demo",
-                "category": "TONDev",
+                "category": "tondev-js",
                 "title": "Download FreeTON Demo"
             },
             {
                 "command": "tondev.se.info",
-                "category": "TONDev",
+                "category": "tondev-se",
                 "title": "Show SE Info"
             },
             {
                 "command": "tondev.se.version",
-                "category": "TONDev",
+                "category": "tondev-se",
                 "title": "Show SE Versions"
             },
             {
                 "command": "tondev.se.update",
-                "category": "TONDev",
+                "category": "tondev-se",
                 "title": "Update SE Instance Version"
             },
             {
                 "command": "tondev.se.set",
-                "category": "TONDev",
+                "category": "tondev-se",
                 "title": "Update SE Instance Config"
             },
             {
                 "command": "tondev.se.start",
-                "category": "TONDev",
+                "category": "tondev-se",
                 "title": "Start SE Instance"
             },
             {
                 "command": "tondev.se.stop",
-                "category": "TONDev",
+                "category": "tondev-se",
                 "title": "Stop SE Instance"
             },
             {
                 "command": "tondev.se.reset",
-                "category": "TONDev",
+                "category": "tondev-se",
                 "title": "Reset SE Instance"
             },
             {
                 "command": "tondev.tonos-cli.install",
-                "category": "TONDev",
+                "category": "tondev-tonos-cli",
                 "title": "Install latest stable TON OS CLI"
             },
             {
                 "command": "tondev.tonos-cli.set",
-                "category": "TONDev",
+                "category": "tondev-tonos-cli",
                 "title": "Change installed version"
             },
             {
                 "command": "tondev.tonos-cli.version",
-                "category": "TONDev",
+                "category": "tondev-tonos-cli",
                 "title": "Show installed and available versions"
             },
             {
                 "command": "tondev.tonos-cli.update",
-                "category": "TONDev",
+                "category": "tondev-tonos-cli",
                 "title": "Update to the latest version"
             }
         ],
