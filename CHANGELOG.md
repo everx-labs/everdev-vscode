@@ -2,6 +2,12 @@
 
 All the notable changes to the "TONDEV" VS Code extension will be documented in this file.
 
+## [0.5.0] 2021-04-29
+
+### New
+
+- Support for TONDEV 0.5.0
+
 ## [0.3.3] 2021-03-20
 
 ### New

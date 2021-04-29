@@ -3,7 +3,7 @@
     "displayName": "TONDev",
     "description": "Free TON Development",
     "publisher": "TONLabs",
-    "version": "0.3.3",
+    "version": "0.5.0",
     "icon": "images/tondev.png",
     "engines": {
         "vscode": "^1.52.0"
@@ -12,13 +12,16 @@
         "Other"
     ],
     "activationEvents": [
+        "onCommand:tondev.clang.create",
+        "onCommand:tondev.clang.compile",
+        "onCommand:tondev.clang.version",
+        "onCommand:tondev.clang.set",
+        "onCommand:tondev.clang.update",
         "onCommand:tondev.sol.create",
         "onCommand:tondev.sol.compile",
         "onCommand:tondev.sol.version",
         "onCommand:tondev.sol.set",
         "onCommand:tondev.sol.update",
-        "onCommand:tondev.js.create",
-        "onCommand:tondev.js.demo",
         "onCommand:tondev.se.info",
         "onCommand:tondev.se.version",
         "onCommand:tondev.se.update",
@@ -26,6 +29,27 @@
         "onCommand:tondev.se.start",
         "onCommand:tondev.se.stop",
         "onCommand:tondev.se.reset",
+        "onCommand:tondev.network.add",
+        "onCommand:tondev.network.delete",
+        "onCommand:tondev.network.list",
+        "onCommand:tondev.network.info",
+        "onCommand:tondev.network.default",
+        "onCommand:tondev.network.giver",
+        "onCommand:tondev.signer.generate",
+        "onCommand:tondev.signer.add",
+        "onCommand:tondev.signer.delete",
+        "onCommand:tondev.signer.list",
+        "onCommand:tondev.signer.info",
+        "onCommand:tondev.signer.default",
+        "onCommand:tondev.contract.info",
+        "onCommand:tondev.contract.topup",
+        "onCommand:tondev.contract.deploy",
+        "onCommand:tondev.contract.run",
+        "onCommand:tondev.contract.run-local",
+        "onCommand:tondev.contract.run-executor",
+        "onCommand:tondev.js.create",
+        "onCommand:tondev.js.demo",
+        "onCommand:tondev.js.wrap",
         "onCommand:tondev.tonos-cli.install",
         "onCommand:tondev.tonos-cli.set",
         "onCommand:tondev.tonos-cli.version",
@@ -37,6 +61,31 @@
     },
     "contributes": {
         "commands": [
+            {
+                "command": "tondev.clang.create",
+                "category": "tondev-clang",
+                "title": "Create C++ Contract"
+            },
+            {
+                "command": "tondev.clang.compile",
+                "category": "tondev-clang",
+                "title": "Compile C++ Contract"
+            },
+            {
+                "command": "tondev.clang.version",
+                "category": "tondev-clang",
+                "title": "Show C++ Compiler Version"
+            },
+            {
+                "command": "tondev.clang.set",
+                "category": "tondev-clang",
+                "title": "Change C++ Compiler Config"
+            },
+            {
+                "command": "tondev.clang.update",
+                "category": "tondev-clang",
+                "title": "Update C++ Compiler"
+            },
             {
                 "command": "tondev.sol.create",
                 "category": "tondev-sol",
@@ -61,16 +110,6 @@
                 "command": "tondev.sol.update",
                 "category": "tondev-sol",
                 "title": "Update Solidity Compiler"
-            },
-            {
-                "command": "tondev.js.create",
-                "category": "tondev-js",
-                "title": "Create FreeTON JS App"
-            },
-            {
-                "command": "tondev.js.demo",
-                "category": "tondev-js",
-                "title": "Download FreeTON Demo"
             },
             {
                 "command": "tondev.se.info",
@@ -108,6 +147,111 @@
                 "title": "Reset SE Instance"
             },
             {
+                "command": "tondev.network.add",
+                "category": "tondev-network",
+                "title": "Add net"
+            },
+            {
+                "command": "tondev.network.delete",
+                "category": "tondev-network",
+                "title": "Delete network from registry"
+            },
+            {
+                "command": "tondev.network.list",
+                "category": "tondev-network",
+                "title": "Prints list of networks"
+            },
+            {
+                "command": "tondev.network.info",
+                "category": "tondev-network",
+                "title": "Prints network detailed information"
+            },
+            {
+                "command": "tondev.network.default",
+                "category": "tondev-network",
+                "title": "Set default network"
+            },
+            {
+                "command": "tondev.network.giver",
+                "category": "tondev-network",
+                "title": "Set giver for network"
+            },
+            {
+                "command": "tondev.signer.generate",
+                "category": "tondev-signer",
+                "title": "Add signer with randomly generated keys"
+            },
+            {
+                "command": "tondev.signer.add",
+                "category": "tondev-signer",
+                "title": "Add signer"
+            },
+            {
+                "command": "tondev.signer.delete",
+                "category": "tondev-signer",
+                "title": "Delete signer from registry"
+            },
+            {
+                "command": "tondev.signer.list",
+                "category": "tondev-signer",
+                "title": "Prints list of registered signers"
+            },
+            {
+                "command": "tondev.signer.info",
+                "category": "tondev-signer",
+                "title": "Get signer detailed information"
+            },
+            {
+                "command": "tondev.signer.default",
+                "category": "tondev-signer",
+                "title": "Set default signer"
+            },
+            {
+                "command": "tondev.contract.info",
+                "category": "tondev-contract",
+                "title": "Prints contract summary"
+            },
+            {
+                "command": "tondev.contract.topup",
+                "category": "tondev-contract",
+                "title": "Top up account from giver"
+            },
+            {
+                "command": "tondev.contract.deploy",
+                "category": "tondev-contract",
+                "title": "Deploy contract to network"
+            },
+            {
+                "command": "tondev.contract.run",
+                "category": "tondev-contract",
+                "title": "Run contract deployed on the network"
+            },
+            {
+                "command": "tondev.contract.run-local",
+                "category": "tondev-contract",
+                "title": "Run contract locally on TVM"
+            },
+            {
+                "command": "tondev.contract.run-executor",
+                "category": "tondev-contract",
+                "title": "Emulate transaction executor locally on TVM"
+            },
+            {
+                "command": "tondev.js.create",
+                "category": "tondev-js",
+                "title": "Create FreeTON JS App"
+            },
+            {
+                "command": "tondev.js.demo",
+                "category": "tondev-js",
+                "title": "Download FreeTON Demo"
+            },
+            {
+                "command": "tondev.js.wrap",
+                "category": "tondev-js",
+                "title": "Wrap ABI file into JavaScript code."
+            },
+            {
                 "command": "tondev.tonos-cli.install",
                 "category": "tondev-tonos-cli",
                 "title": "Install latest stable TON OS CLI"
@@ -132,12 +276,52 @@
             "explorer/context": [
                 {
                     "when": "explorerResourceIsFolder",
+                    "command": "tondev.clang.create",
+                    "group": "TONDev"
+                },
+                {
+                    "when": "resourceFilename =~ /\\.cpp$/i",
+                    "command": "tondev.clang.compile",
+                    "group": "TONDev"
+                },
+                {
+                    "when": "explorerResourceIsFolder",
                     "command": "tondev.sol.create",
                     "group": "TONDev"
                 },
                 {
-                    "when": "resourceExtname =~ /\\.sol$/i",
+                    "when": "resourceFilename =~ /\\.sol$/i",
                     "command": "tondev.sol.compile",
+                    "group": "TONDev"
+                },
+                {
+                    "when": "resourceFilename =~ /\\.abi$|\\.abi\\.json$|\\.tvc$/i",
+                    "command": "tondev.contract.info",
+                    "group": "TONDev"
+                },
+                {
+                    "when": "resourceFilename =~ /\\.abi$|\\.abi\\.json$|\\.tvc$/i",
+                    "command": "tondev.contract.topup",
+                    "group": "TONDev"
+                },
+                {
+                    "when": "resourceFilename =~ /\\.abi$|\\.abi\\.json$|\\.tvc$/i",
+                    "command": "tondev.contract.deploy",
+                    "group": "TONDev"
+                },
+                {
+                    "when": "resourceFilename =~ /\\.abi$|\\.abi\\.json$|\\.tvc$/i",
+                    "command": "tondev.contract.run",
+                    "group": "TONDev"
+                },
+                {
+                    "when": "resourceFilename =~ /\\.abi$|\\.abi\\.json$|\\.tvc$/i",
+                    "command": "tondev.contract.run-local",
+                    "group": "TONDev"
+                },
+                {
+                    "when": "resourceFilename =~ /\\.abi$|\\.abi\\.json$|\\.tvc$/i",
+                    "command": "tondev.contract.run-executor",
                     "group": "TONDev"
                 },
                 {
@@ -148,6 +332,11 @@
                 {
                     "when": "explorerResourceIsFolder",
                     "command": "tondev.js.demo",
+                    "group": "TONDev"
+                },
+                {
+                    "when": "resourceFilename =~ /\\.abi\\.json$/i",
+                    "command": "tondev.js.wrap",
                     "group": "TONDev"
                 }
             ]
@@ -163,7 +352,9 @@
         "test": "node ./out/test/runTest.js"
     },
     "dependencies": {
-        "tondev": "^0.3.3"
+        "tondev": "^0.5.0",
+        "@tonclient/core": "^1",
+        "@tonclient/lib-node": "^1"
     },
     "devDependencies": {
         "@types/glob": "^7.1.3",
