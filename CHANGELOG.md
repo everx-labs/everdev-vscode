@@ -6,7 +6,10 @@ All the notable changes to the "TONDEV" VS Code extension will be documented in 
 
 ### New
 
-- Support for TONDEV 0.5.0
+- Support for [TONDEV 0.5.0](https://github.com/tonlabs/tondev/blob/main/CHANGELOG.md#release-notes)
+
+### Fixed
+- tvm_linker downloads always even if it's up to date.
 
 ## [0.3.3] 2021-03-20
 
