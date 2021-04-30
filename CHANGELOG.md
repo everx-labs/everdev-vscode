@@ -5,7 +5,7 @@ All the notable changes to the "TONDEV" VS Code extension will be documented in 
 ## [0.5.0] 2021-04-30
 ### New
 
-- TONDEV 0.5 commands support. 
+- [TONDEV 0.5](https://github.com/tonlabs/tondev/blob/main/CHANGELOG.md#050---2021-04-23) commands support.   
 **Attention!** The current UI is preliminary and not even experimental, and will be changed in future. 
 Skip entering the default values in UI by clicking Enter. 
 
