@@ -108,9 +108,6 @@ Access this command from
 
 This command updates the compiler to the latest version.
 
-In case you had some problems with installation or want to pull the latest compiler version use this command.
-Access it from `View->Command palette->TONDEV: Update Solidity Compiler`
-
 ## SDK
 
 ### Create Demo Project
