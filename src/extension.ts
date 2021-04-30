@@ -4,6 +4,10 @@ import { Command, CommandArg, Terminal } from "tondev";
 import * as vscode from "vscode";
 import * as fs from "fs";
 import * as path from "path";
+import { TonClient } from "@tonclient/core";
+import { libNode } from "@tonclient/lib-node";
+TonClient.useBinaryLibrary(libNode);
+
 type OutputTerminal = Terminal & { output: vscode.OutputChannel };
 let _tondevTerminal: OutputTerminal | undefined;
 function tondevTerminal(): OutputTerminal {

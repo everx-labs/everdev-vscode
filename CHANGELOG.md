@@ -2,6 +2,19 @@
 
 All the notable changes to the "TONDEV" VS Code extension will be documented in this file.
 
+## [0.5.0] 2021-04-30
+### New
+
+- [TONDEV 0.5](https://github.com/tonlabs/tondev/blob/main/CHANGELOG.md#050---2021-04-23) commands support.   
+**Attention!** The current UI is preliminary and not even experimental, and will be changed in future. 
+Skip entering the default values in UI by clicking Enter. 
+
+This release is an intermediate step between current tondev functionality and future VS Code GUI implementation.
+In the next releases we plan to add nice UI for contract deployment and execution, network management, signer management.
+### Fixed
+
+- tvm_linker downloads always even if it's up to date.
+
 ## [0.3.3] 2021-03-20
 
 ### New
