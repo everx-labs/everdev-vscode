@@ -31,8 +31,8 @@ Access [TONDEV](https://docs.ton.dev/) Toolkit functionality directly from popul
 Search for [`TONDev` extention](https://marketplace.visualstudio.com/items?itemName=TONLabs.tondev) in VS Code Marketplace and install it.
 
 # Supported operations
-Go to command pallete and enter `tondev`. You will see the list of available commands.  
-Also some commands can be accessed from context menu of Code Explorer (click on empty area) or files that have .sol, .cpp, abi.json and .tvc extensions.
+Go to `View -> Command Pallete...` and enter `tondev`. You will see the list of available commands.  
+Also some commands can be accessed from context menu of Code Explorer (click on empty area) or files that have `.sol`, `.cpp`, `abi.json` and `.tvc` extensions.
 
 ![TONDEV commands](images/commands.jpg)
 
