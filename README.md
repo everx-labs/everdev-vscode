@@ -20,11 +20,12 @@ Access [TONDEV](https://docs.ton.dev/) Toolkit functionality directly from popul
     - [Update](#update-1)
   - [SDK](#sdk)
     - [Create Demo Project](#create-demo-project)
-  - [Roadmap](#roadmap)
 - [Backlog](#backlog)
-    - [C/C++](#cc)
-    - [TS4](#ts4)
-    - [Network support](#network-support)
+  - [Compilers](#compilers)
+  - [TS4](#ts4)
+  - [Network registry support](#network-registry-support)
+  - [Signer registry support](#signer-registry-support)
+  - [Contract management support](#contract-management-support)
 
 # Installation
 
@@ -130,23 +131,21 @@ Client creation:
 Dependencies:
 ![Dependencies](images/js_depend.jpg)
 
-## Roadmap
 
 # Backlog
 
-- support other compilation and linking options
+## Compilers
+- Support other compilation and linking options
 
-### C/C++
+## TS4
 
-- Compile C/C++ contracts
+- Debug contracts with TS framework and tools
 
-### TS4
+## Network registry support
+- Support GUI for network management
 
-- debug contracts with TS framework and tools
+## Signer registry support
+- Support GUI for keys management
 
-### Network support
-
-- connection to main.ton.dev, net.ton.dev and custom network configurations
-- local network
-- deploying to networks
-- operating with TON blockchains including real blockchain networks, TONOS SE
+## Contract management support
+- Support deploy and execution of contracts with nice UI
