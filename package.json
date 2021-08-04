@@ -29,6 +29,13 @@
         "onCommand:tondev.se.start",
         "onCommand:tondev.se.stop",
         "onCommand:tondev.se.reset",
+        "onCommand:tondev.se-nd.info",
+        "onCommand:tondev.se-nd.version",
+        "onCommand:tondev.se-nd.update",
+        "onCommand:tondev.se-nd.set",
+        "onCommand:tondev.se-nd.start",
+        "onCommand:tondev.se-nd.stop",
+        "onCommand:tondev.se-nd.reset",
         "onCommand:tondev.network.add",
         "onCommand:tondev.network.delete",
         "onCommand:tondev.network.list",
@@ -145,6 +152,41 @@
                 "command": "tondev.se.reset",
                 "category": "tondev-se",
                 "title": "Reset SE Instance"
+            },
+            {
+                "command": "tondev.se-nd.info",
+                "category": "tondev-se-nd",
+                "title": "Non Docker: Show SE Info"
+            },
+            {
+                "command": "tondev.se-nd.version",
+                "category": "tondev-se-nd",
+                "title": "Non Docker: Show SE Versions"
+            },
+            {
+                "command": "tondev.se-nd.update",
+                "category": "tondev-se-nd",
+                "title": "Non Docker: Update SE Instance Version"
+            },
+            {
+                "command": "tondev.se-nd.set",
+                "category": "tondev-se-nd",
+                "title": "Non Docker: Update SE Instance Config"
+            },
+            {
+                "command": "tondev.se-nd.start",
+                "category": "tondev-se-nd",
+                "title": "Non Docker: Start SE Instance"
+            },
+            {
+                "command": "tondev.se-nd.stop",
+                "category": "tondev-se-nd",
+                "title": "Non Docker: Stop SE Instance"
+            },
+            {
+                "command": "tondev.se-nd.reset",
+                "category": "tondev-se-nd",
+                "title": "Non Docker: Reset SE Instance"
             },
             {
                 "command": "tondev.network.add",
