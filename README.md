@@ -1,6 +1,6 @@
 # TONDEV Visual Studio Code plugin
 
-Access [TONDEV](https://docs.ton.dev/) Toolkit functionality directly from VS Code IDE with [TONDEV extension](https://marketplace.visualstudio.com/items?itemName=TONLabs.tondev). 
+Access [TONDev](https://docs.ton.dev/) Toolkit functionality directly from VS Code IDE with [TONDEV extension](https://marketplace.visualstudio.com/items?itemName=TONLabs.tondev). 
 
 # Content Table
 
@@ -29,7 +29,9 @@ Access [TONDEV](https://docs.ton.dev/) Toolkit functionality directly from VS Co
 
 # Installation
 
-Search for [`TONDev` extention](https://marketplace.visualstudio.com/items?itemName=TONLabs.tondev) in VS Code Marketplace and install it.
+**VS Code**: search for  `TONDev` extention or go to https://marketplace.visualstudio.com/items?itemName=TONLabs.tondev.
+
+**VS Codium**: search for  `TONDev` extention or go to https://open-vsx.org/extension/TONLabs/tondev
 
 # Supported operations
 Go to `View -> Command Pallete...` and enter `tondev`. You will see the list of available commands.  
