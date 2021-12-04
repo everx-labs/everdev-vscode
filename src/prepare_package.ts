@@ -63,15 +63,15 @@ function downloadAndGunzip(dest: string, url: string): Promise<void> {
 
 const libNodePath = path.resolve(__dirname, "..", "node_modules", "@tonclient", "lib-node");
 
-async function downloadTonClient(platform: string) {
-    process.stdout.write(`Downloading tonclient.${platform}.node... `);
-    const targetPath = `${libNodePath}/tonclient.${platform}.node`;
+async function downloadTonClient(platform: string, arch: string) {
+    process.stdout.write(`Downloading tonclient.${platform}.${arch}.node... `);
+    const targetPath = `${libNodePath}/tonclient.${platform}.${arch}.node`;
     if (fs.existsSync(targetPath)) {
         process.stdout.write("Already exists. Skipped.");
     } else {
         await downloadAndGunzip(
             `${libNodePath}/tonclient.${platform}.node`,
-            `https://binaries.tonlabs.io/tonclient_1_14_nodejs_addon_${platform}.gz`,
+            `https://binaries.tonlabs.io/tonclient_1_nodejs_addon_${arch}-${platform}.gz`,
         );
     }
     process.stdout.write(`\n`);
@@ -122,9 +122,10 @@ async function main() {
     pkg.activationEvents = activationEvents;
 
     fs.writeFileSync(path.resolve(__dirname, "..", "package.json"), JSON.stringify(pkg, undefined, "    "), "utf8");
-    await downloadTonClient("darwin");
-    await downloadTonClient("linux");
-    await downloadTonClient("win32");
+    await downloadTonClient("darwin", "arm64");
+    await downloadTonClient("darwin", "x64");
+    await downloadTonClient("linux", "x64");
+    await downloadTonClient("win32", "x64");
     if (fs.existsSync(path.resolve(libNodePath, "tonclient.node"))) {
         console.log("Deleting tonclient.node...");
         fs.unlinkSync(path.resolve(libNodePath, "tonclient.node"));
@@ -132,9 +133,9 @@ async function main() {
     let indexJs = fs.readFileSync(path.resolve(libNodePath, "index.js"), "utf8");
     indexJs = indexJs
         .split("return require('./tonclient.node')")
-        .join("return require(`./tonclient.${os.platform()}.node`)")
+        .join("return require(`./tonclient.${os.platform()}.${os.arch()}.node`)")
         .split("__dirname, 'tonclient.node'")
-        .join("__dirname, `tonclient.${os.platform()}.node`");
+        .join("__dirname, `tonclient.${os.platform()}.${os.arch()}.node`");
     fs.writeFileSync(path.resolve(libNodePath, "index.js"), indexJs, "utf8");
 }
 
