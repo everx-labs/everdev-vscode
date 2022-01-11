@@ -88,7 +88,7 @@ async function runCommand(command: Command, vscodeArgs: any) {
     terminal.output.show();
     try {
         await command.run(tondevTerminal(), args);
-    } catch (err) {
+    } catch (err: any) {
         terminal.writeError(err.toString());
     }
 }

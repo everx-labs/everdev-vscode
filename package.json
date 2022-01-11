@@ -3,6 +3,7 @@
     "displayName": "TONDev",
     "description": "Free TON Development",
     "publisher": "TONLabs",
+    "version": "0.11.0",
     "author": "TON DEV SOLUTIONS LTD.",
     "license": "Apache-2.0",
     "licenses": [
@@ -11,7 +12,6 @@
         "url": "http://www.apache.org/licenses/LICENSE-2.0"
       }
     ],
-    "version": "0.5.0",
     "icon": "images/tondev.png",
     "engines": {
         "vscode": "^1.52.0"
@@ -37,6 +37,7 @@
         "onCommand:tondev.se.start",
         "onCommand:tondev.se.stop",
         "onCommand:tondev.se.reset",
+        "onCommand:tondev.se.delete",
         "onCommand:tondev.network.add",
         "onCommand:tondev.network.delete",
         "onCommand:tondev.network.list",
@@ -61,7 +62,16 @@
         "onCommand:tondev.tonos-cli.install",
         "onCommand:tondev.tonos-cli.set",
         "onCommand:tondev.tonos-cli.version",
-        "onCommand:tondev.tonos-cli.update"
+        "onCommand:tondev.tonos-cli.update",
+        "onCommand:tondev.ts4.version",
+        "onCommand:tondev.ts4.install",
+        "onCommand:tondev.ts4.update",
+        "onCommand:tondev.ts4.create",
+        "onCommand:tondev.ts4.run",
+        "onCommand:tondev.debrowser.version",
+        "onCommand:tondev.debrowser.start",
+        "onCommand:tondev.debrowser.stop",
+        "onCommand:tondev.debrowser.interfaces"
     ],
     "main": "./out/extension.js",
     "repository": {
@@ -153,6 +163,11 @@
                 "command": "tondev.se.reset",
                 "category": "tondev-se",
                 "title": "Reset SE Instance"
+            },
+            {
+                "command": "tondev.se.delete",
+                "category": "tondev-se",
+                "title": "Delete SE from list"
             },
             {
                 "command": "tondev.network.add",
@@ -278,6 +293,51 @@
                 "command": "tondev.tonos-cli.update",
                 "category": "tondev-tonos-cli",
                 "title": "Update to the latest version"
+            },
+            {
+                "command": "tondev.ts4.version",
+                "category": "tondev-ts4",
+                "title": "Show installed and available versions"
+            },
+            {
+                "command": "tondev.ts4.install",
+                "category": "tondev-ts4",
+                "title": "Install a specific release of TestSuite4"
+            },
+            {
+                "command": "tondev.ts4.update",
+                "category": "tondev-ts4",
+                "title": "Update to the latest version"
+            },
+            {
+                "command": "tondev.ts4.create",
+                "category": "tondev-ts4",
+                "title": "Create TestSuite4 test"
+            },
+            {
+                "command": "tondev.ts4.run",
+                "category": "tondev-ts4",
+                "title": "Run TestSuite4's test"
+            },
+            {
+                "command": "tondev.debrowser.version",
+                "category": "tondev-debrowser",
+                "title": "Show DeBrowser Versions"
+            },
+            {
+                "command": "tondev.debrowser.start",
+                "category": "tondev-debrowser",
+                "title": "Start ExtraTON DeBrowser, default is 'latest'"
+            },
+            {
+                "command": "tondev.debrowser.stop",
+                "category": "tondev-debrowser",
+                "title": "Stop ExtraTON DeBrowser"
+            },
+            {
+                "command": "tondev.debrowser.interfaces",
+                "category": "tondev-debrowser",
+                "title": "Show list of implemented interfaces"
             }
         ],
         "menus": {
@@ -346,6 +406,16 @@
                     "when": "resourceFilename =~ /\\.abi\\.json$/i",
                     "command": "tondev.js.wrap",
                     "group": "TONDev"
+                },
+                {
+                    "when": "explorerResourceIsFolder",
+                    "command": "tondev.ts4.create",
+                    "group": "TONDev"
+                },
+                {
+                    "when": "resourceFilename =~ /\\.py$/i",
+                    "command": "tondev.ts4.run",
+                    "group": "TONDev"
                 }
             ]
         }
@@ -360,7 +430,7 @@
         "test": "node ./out/test/runTest.js"
     },
     "dependencies": {
-        "tondev": "^0.5.0",
+        "tondev": "^0",
         "@tonclient/core": "^1",
         "@tonclient/lib-node": "^1"
     },
