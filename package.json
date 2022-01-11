@@ -3,6 +3,14 @@
     "displayName": "TONDev",
     "description": "Free TON Development",
     "publisher": "TONLabs",
+    "author": "TON DEV SOLUTIONS LTD.",
+    "license": "Apache-2.0",
+    "licenses": [
+      {
+        "type": "Apache-2.0",
+        "url": "http://www.apache.org/licenses/LICENSE-2.0"
+      }
+    ],
     "version": "0.5.0",
     "icon": "images/tondev.png",
     "engines": {
