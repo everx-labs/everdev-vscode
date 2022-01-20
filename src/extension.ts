@@ -1,6 +1,6 @@
 import { fstat } from "fs";
-import { controllers } from "tondev";
-import { Command, CommandArg, Terminal } from "tondev";
+import { controllers } from "everdev";
+import { Command, CommandArg, Terminal } from "everdev";
 import * as vscode from "vscode";
 import * as fs from "fs";
 import * as path from "path";
@@ -12,7 +12,7 @@ type OutputTerminal = Terminal & { output: vscode.OutputChannel };
 let _tondevTerminal: OutputTerminal | undefined;
 function tondevTerminal(): OutputTerminal {
     if (!_tondevTerminal) {
-        const output = vscode.window.createOutputChannel("TONDev");
+        const output = vscode.window.createOutputChannel("EverDev");
         _tondevTerminal = {
             output,
             log: (...args: any[]) => {
@@ -97,7 +97,7 @@ export function activate(context: vscode.ExtensionContext) {
     for (const controller of controllers) {
         for (const command of controller.commands) {
             const disposable = vscode.commands.registerCommand(
-                `tondev.${controller.name}.${command.name}`,
+                `everdev.${controller.name}.${command.name}`,
                 async (...args: any[]) => {
                     await runCommand(command, args);
                 },

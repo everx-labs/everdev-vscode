@@ -1,6 +1,6 @@
 import * as path from "path";
 import * as fs from "fs";
-import {controllers} from "tondev";
+import {controllers} from "everdev";
 import {getCommandInfo} from "./utils";
 import * as https from "https";
 import * as zlib from "zlib";
@@ -86,10 +86,10 @@ async function main() {
 
     for (const controller of controllers) {
         for (const command of controller.commands) {
-            const commandName = `tondev.${controller.name}.${command.name}`;
+            const commandName = `everdev.${controller.name}.${command.name}`;
             commands.push({
                 command: commandName,
-                category: `tondev-${controller.name}`,
+                category: `everdev-${controller.name}`,
                 title: command.title,
             });
             activationEvents.push(`onCommand:${commandName}`);
@@ -105,13 +105,13 @@ async function main() {
                 explorerContext.push({
                     when: `resourceFilename =~ ${pat}`,
                     command: commandName,
-                    group: "TONDev",
+                    group: "EverDev",
                 });
             } else if (folderArg) {
                 explorerContext.push({
                     when: "explorerResourceIsFolder",
                     command: commandName,
-                    group: "TONDev",
+                    group: "EverDev",
                 });
             }
         }

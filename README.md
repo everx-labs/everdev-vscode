@@ -1,10 +1,10 @@
-# TONDEV Visual Studio Code plugin
+# EverDev Visual Studio Code plugin
 
-Access [TONDev](https://docs.ton.dev/) Toolkit functionality directly from VS Code IDE with [TONDEV extension](https://marketplace.visualstudio.com/items?itemName=TONLabs.tondev). 
+Access [EverDev](https://docs.ton.dev/) Toolkit functionality directly from VS Code IDE with [EverDev extension](https://marketplace.visualstudio.com/items?itemName=TONLabs.everdev). 
 
 # Content Table
 
-- [TONDEV Visual Studio Code plugin](#tondev-visual-studio-code-plugin)
+- [EverDev Visual Studio Code plugin](#everdev-visual-studio-code-plugin)
 - [Content Table](#content-table)
 - [Installation](#installation)
 - [Supported operations](#supported-operations)
@@ -29,15 +29,15 @@ Access [TONDev](https://docs.ton.dev/) Toolkit functionality directly from VS Co
 
 # Installation
 
-**VS Code**: search for  `TONDev` extention or go to https://marketplace.visualstudio.com/items?itemName=TONLabs.tondev.
+**VS Code**: search for  `EverDev` extention or go to https://marketplace.visualstudio.com/items?itemName=TONLabs.everdev.
 
-**VS Codium**: search for  `TONDev` extention or go to https://open-vsx.org/extension/TONLabs/tondev
+**VS Codium**: search for  `EverDev` extention or go to https://open-vsx.org/extension/TONLabs/everdev
 
 # Supported operations
-Go to `View -> Command Pallete...` and enter `tondev`. You will see the list of available commands.  
+Go to `View -> Command Pallete...` and enter `everdev`. You will see the list of available commands.  
 Also some commands can be accessed from context menu of Code Explorer (click on empty area) or files that have `.sol`, `.cpp`, `abi.json` and `.tvc` extensions.
 
-![TONDEV commands](images/commands.jpg)
+![EverDev commands](images/commands.jpg)
 
 ## Solidity
 
@@ -47,7 +47,7 @@ This command creates a hello-world Solidity contract with comments that you can 
 
 Click on the empty space in Explorer and find `Create Solidity Contract` command or access it from
 
-`View->Command palette->TONDEV: Create Solidity Contract`.
+`View->Command palette->EverDev: Create Solidity Contract`.
 
 ![Create Solidity contract](images/sol_create.jpg).
 
@@ -61,7 +61,7 @@ This command compiles and links a selected Solidity contract. After successful c
 
 Find `Compile Solidity Contract` command in the .sol file context menu or access it from 
 
-`View->Command palette->TONDEV: Compile Solidity Contract`
+`View->Command palette->EverDev: Compile Solidity Contract`
 
 ![Compile Solidity Contract](images/compile.gif)
 
@@ -70,14 +70,14 @@ Find `Compile Solidity Contract` command in the .sol file context menu or access
 This command shows the currently installed Solidity compiler version.
 
 Access this command from
-`View->Command palette->TONDEV: Show Solidity Version`
+`View->Command palette->EverDev: Show Solidity Version`
 
 ### Update
 
 This command updates the compiler to the latest version.
 
 In case you had some problems with installation or want to pull the latest compiler version use this command.
-Access it from `View->Command palette->TONDEV: Update Solidity Compiler`
+Access it from `View->Command palette->EverDev: Update Solidity Compiler`
 
 ## C++
 
@@ -87,7 +87,7 @@ This command creates a hello-world C++ contract with comments that you can obser
 
 Click on the empty space in Explorer and find `Create C++ Contract` command or access it from
 
-`View->Command palette->TONDEV: Create C++ Contract`.
+`View->Command palette->EverDev: Create C++ Contract`.
 
 We named the contract `Contract`. After command is finished you will see the source code of hello world contract that you can now compile.
 
@@ -97,7 +97,7 @@ This command compiles and links a selected C++ contract. After successful compil
 
 Find `Compile C++ Contract` command in the .sol file context menu or access it from 
 
-`View->Command palette->TONDEV: Compile C++ Contract`
+`View->Command palette->EverDev: Compile C++ Contract`
 
 
 ### Version
@@ -105,7 +105,7 @@ Find `Compile C++ Contract` command in the .sol file context menu or access it f
 This command shows the currently installed Solidity compiler version.
 
 Access this command from
-`View->Command palette->TONDEV: Show C++ Version`
+`View->Command palette->EverDev: Show C++ Version`
 
 ### Update
 
@@ -118,7 +118,7 @@ This command updates the compiler to the latest version.
 This command creates a Node.js project with SDK latest dependencies and index.js file with main Client object creation.
 
 Click on the empty space in Explorer and find `Create TON JS App` command or access it from
-`View->Command palette->TONDEV: Create TON JS App`.
+`View->Command palette->EverDev: Create TON JS App`.
 
 ![Create NodeJS project](images/js_create.jpg)
 

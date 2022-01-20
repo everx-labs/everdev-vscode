@@ -2,6 +2,12 @@
 
 All the notable changes to the "TONDEV" VS Code extension will be documented in this file.
 
+## [1.0.0] 2022-01-20
+### New
+Renamed plugin to `everdev-vscode` and use `everdev`.
+If you already have installed old plugin `TONDev`, you need to uninstall it.
+
+
 ## [0.5.0] 2021-04-30
 ### New
 
