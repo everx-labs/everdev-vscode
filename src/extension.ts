@@ -1,6 +1,6 @@
 import { fstat } from "fs";
-import { controllers } from "tondev";
-import { Command, CommandArg, Terminal } from "tondev";
+import { controllers } from "everdev";
+import { Command, CommandArg, Terminal } from "everdev";
 import * as vscode from "vscode";
 import * as fs from "fs";
 import * as path from "path";
@@ -12,7 +12,7 @@ type OutputTerminal = Terminal & { output: vscode.OutputChannel };
 let _tondevTerminal: OutputTerminal | undefined;
 function tondevTerminal(): OutputTerminal {
     if (!_tondevTerminal) {
-        const output = vscode.window.createOutputChannel("TONDev");
+        const output = vscode.window.createOutputChannel("EverDev");
         _tondevTerminal = {
             output,
             log: (...args: any[]) => {
@@ -35,7 +35,9 @@ function getFsPath(uri: vscode.Uri | undefined): string | undefined {
 }
 
 function getContextFilePath(vscodeArgs: any): string | undefined {
-    return getFsPath(vscodeArgs) ?? getFsPath(vscodeArgs?.[0]) ?? getFsPath(vscode.window.activeTextEditor?.document.uri);
+    return (
+        getFsPath(vscodeArgs) ?? getFsPath(vscodeArgs?.[0]) ?? getFsPath(vscode.window.activeTextEditor?.document.uri)
+    );
 }
 
 function getContextFolderPath(vscodeArgs: any): string | undefined {
@@ -82,7 +84,11 @@ async function runCommand(command: Command, vscodeArgs: any) {
         if (value === undefined) {
             return;
         }
-        args[arg.name] = value;
+        const name = arg.name
+            .split("-")
+            .map((x, i) => (i > 0 ? x.substring(0, 1).toUpperCase() + x.substring(1) : x))
+            .join("");
+        args[name] = value;
     }
     const terminal = tondevTerminal();
     terminal.output.show();
@@ -97,7 +103,7 @@ export function activate(context: vscode.ExtensionContext) {
     for (const controller of controllers) {
         for (const command of controller.commands) {
             const disposable = vscode.commands.registerCommand(
-                `tondev.${controller.name}.${command.name}`,
+                `everdev.${controller.name}.${command.name}`,
                 async (...args: any[]) => {
                     await runCommand(command, args);
                 },

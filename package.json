@@ -1,16 +1,16 @@
 {
-    "name": "tondev",
-    "displayName": "TONDev",
-    "description": "Free TON Development",
+    "name": "everdev",
+    "displayName": "EverDev",
+    "description": "Everscale Dev Environemnt",
     "publisher": "TONLabs",
-    "version": "0.11.0",
+    "version": "1.0.0",
     "author": "TON DEV SOLUTIONS LTD.",
     "license": "Apache-2.0",
     "licenses": [
-      {
-        "type": "Apache-2.0",
-        "url": "http://www.apache.org/licenses/LICENSE-2.0"
-      }
+        {
+            "type": "Apache-2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0"
+        }
     ],
     "icon": "images/tondev.png",
     "engines": {
@@ -20,323 +20,329 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:tondev.clang.create",
-        "onCommand:tondev.clang.compile",
-        "onCommand:tondev.clang.version",
-        "onCommand:tondev.clang.set",
-        "onCommand:tondev.clang.update",
-        "onCommand:tondev.sol.create",
-        "onCommand:tondev.sol.compile",
-        "onCommand:tondev.sol.version",
-        "onCommand:tondev.sol.set",
-        "onCommand:tondev.sol.update",
-        "onCommand:tondev.se.info",
-        "onCommand:tondev.se.version",
-        "onCommand:tondev.se.update",
-        "onCommand:tondev.se.set",
-        "onCommand:tondev.se.start",
-        "onCommand:tondev.se.stop",
-        "onCommand:tondev.se.reset",
-        "onCommand:tondev.se.delete",
-        "onCommand:tondev.network.add",
-        "onCommand:tondev.network.delete",
-        "onCommand:tondev.network.list",
-        "onCommand:tondev.network.info",
-        "onCommand:tondev.network.default",
-        "onCommand:tondev.network.giver",
-        "onCommand:tondev.signer.generate",
-        "onCommand:tondev.signer.add",
-        "onCommand:tondev.signer.delete",
-        "onCommand:tondev.signer.list",
-        "onCommand:tondev.signer.info",
-        "onCommand:tondev.signer.default",
-        "onCommand:tondev.contract.info",
-        "onCommand:tondev.contract.topup",
-        "onCommand:tondev.contract.deploy",
-        "onCommand:tondev.contract.run",
-        "onCommand:tondev.contract.run-local",
-        "onCommand:tondev.contract.run-executor",
-        "onCommand:tondev.js.create",
-        "onCommand:tondev.js.demo",
-        "onCommand:tondev.js.wrap",
-        "onCommand:tondev.tonos-cli.install",
-        "onCommand:tondev.tonos-cli.set",
-        "onCommand:tondev.tonos-cli.version",
-        "onCommand:tondev.tonos-cli.update",
-        "onCommand:tondev.ts4.version",
-        "onCommand:tondev.ts4.install",
-        "onCommand:tondev.ts4.update",
-        "onCommand:tondev.ts4.create",
-        "onCommand:tondev.ts4.run",
-        "onCommand:tondev.debrowser.version",
-        "onCommand:tondev.debrowser.start",
-        "onCommand:tondev.debrowser.stop",
-        "onCommand:tondev.debrowser.interfaces"
+        "onCommand:everdev.clang.create",
+        "onCommand:everdev.clang.compile",
+        "onCommand:everdev.clang.version",
+        "onCommand:everdev.clang.set",
+        "onCommand:everdev.clang.update",
+        "onCommand:everdev.sol.create",
+        "onCommand:everdev.sol.compile",
+        "onCommand:everdev.sol.ast",
+        "onCommand:everdev.sol.version",
+        "onCommand:everdev.sol.set",
+        "onCommand:everdev.sol.update",
+        "onCommand:everdev.se.info",
+        "onCommand:everdev.se.version",
+        "onCommand:everdev.se.update",
+        "onCommand:everdev.se.set",
+        "onCommand:everdev.se.start",
+        "onCommand:everdev.se.stop",
+        "onCommand:everdev.se.reset",
+        "onCommand:everdev.se.delete",
+        "onCommand:everdev.network.add",
+        "onCommand:everdev.network.delete",
+        "onCommand:everdev.network.list",
+        "onCommand:everdev.network.info",
+        "onCommand:everdev.network.default",
+        "onCommand:everdev.network.giver",
+        "onCommand:everdev.signer.generate",
+        "onCommand:everdev.signer.add",
+        "onCommand:everdev.signer.delete",
+        "onCommand:everdev.signer.list",
+        "onCommand:everdev.signer.info",
+        "onCommand:everdev.signer.default",
+        "onCommand:everdev.contract.info",
+        "onCommand:everdev.contract.topup",
+        "onCommand:everdev.contract.deploy",
+        "onCommand:everdev.contract.run",
+        "onCommand:everdev.contract.run-local",
+        "onCommand:everdev.contract.run-executor",
+        "onCommand:everdev.js.create",
+        "onCommand:everdev.js.demo",
+        "onCommand:everdev.js.wrap",
+        "onCommand:everdev.tonos-cli.install",
+        "onCommand:everdev.tonos-cli.set",
+        "onCommand:everdev.tonos-cli.version",
+        "onCommand:everdev.tonos-cli.update",
+        "onCommand:everdev.ts4.version",
+        "onCommand:everdev.ts4.install",
+        "onCommand:everdev.ts4.update",
+        "onCommand:everdev.ts4.create",
+        "onCommand:everdev.ts4.run",
+        "onCommand:everdev.debrowser.version",
+        "onCommand:everdev.debrowser.start",
+        "onCommand:everdev.debrowser.stop",
+        "onCommand:everdev.debrowser.interfaces"
     ],
     "main": "./out/extension.js",
     "repository": {
-        "url": "https://github.com/tonlabs/tondev-vscode"
+        "url": "https://github.com/tonlabs/everdev-vscode"
     },
     "contributes": {
         "commands": [
             {
-                "command": "tondev.clang.create",
-                "category": "tondev-clang",
+                "command": "everdev.clang.create",
+                "category": "everdev-clang",
                 "title": "Create C++ Contract"
             },
             {
-                "command": "tondev.clang.compile",
-                "category": "tondev-clang",
+                "command": "everdev.clang.compile",
+                "category": "everdev-clang",
                 "title": "Compile C++ Contract"
             },
             {
-                "command": "tondev.clang.version",
-                "category": "tondev-clang",
+                "command": "everdev.clang.version",
+                "category": "everdev-clang",
                 "title": "Show C++ Compiler Version"
             },
             {
-                "command": "tondev.clang.set",
-                "category": "tondev-clang",
+                "command": "everdev.clang.set",
+                "category": "everdev-clang",
                 "title": "Change C++ Compiler Config"
             },
             {
-                "command": "tondev.clang.update",
-                "category": "tondev-clang",
+                "command": "everdev.clang.update",
+                "category": "everdev-clang",
                 "title": "Update C++ Compiler"
             },
             {
-                "command": "tondev.sol.create",
-                "category": "tondev-sol",
+                "command": "everdev.sol.create",
+                "category": "everdev-sol",
                 "title": "Create Solidity Contract"
             },
             {
-                "command": "tondev.sol.compile",
-                "category": "tondev-sol",
+                "command": "everdev.sol.compile",
+                "category": "everdev-sol",
                 "title": "Compile Solidity Contract"
             },
             {
-                "command": "tondev.sol.version",
-                "category": "tondev-sol",
+                "command": "everdev.sol.ast",
+                "category": "everdev-sol",
+                "title": "AST of all source files in a JSON or compact-JSON format."
+            },
+            {
+                "command": "everdev.sol.version",
+                "category": "everdev-sol",
                 "title": "Show Solidity Version"
             },
             {
-                "command": "tondev.sol.set",
-                "category": "tondev-sol",
+                "command": "everdev.sol.set",
+                "category": "everdev-sol",
                 "title": "Change Solidity Config"
             },
             {
-                "command": "tondev.sol.update",
-                "category": "tondev-sol",
+                "command": "everdev.sol.update",
+                "category": "everdev-sol",
                 "title": "Update Solidity Compiler"
             },
             {
-                "command": "tondev.se.info",
-                "category": "tondev-se",
+                "command": "everdev.se.info",
+                "category": "everdev-se",
                 "title": "Show SE Info"
             },
             {
-                "command": "tondev.se.version",
-                "category": "tondev-se",
+                "command": "everdev.se.version",
+                "category": "everdev-se",
                 "title": "Show SE Versions"
             },
             {
-                "command": "tondev.se.update",
-                "category": "tondev-se",
+                "command": "everdev.se.update",
+                "category": "everdev-se",
                 "title": "Update SE Instance Version"
             },
             {
-                "command": "tondev.se.set",
-                "category": "tondev-se",
+                "command": "everdev.se.set",
+                "category": "everdev-se",
                 "title": "Update SE Instance Config"
             },
             {
-                "command": "tondev.se.start",
-                "category": "tondev-se",
+                "command": "everdev.se.start",
+                "category": "everdev-se",
                 "title": "Start SE Instance"
             },
             {
-                "command": "tondev.se.stop",
-                "category": "tondev-se",
+                "command": "everdev.se.stop",
+                "category": "everdev-se",
                 "title": "Stop SE Instance"
             },
             {
-                "command": "tondev.se.reset",
-                "category": "tondev-se",
+                "command": "everdev.se.reset",
+                "category": "everdev-se",
                 "title": "Reset SE Instance"
             },
             {
-                "command": "tondev.se.delete",
-                "category": "tondev-se",
+                "command": "everdev.se.delete",
+                "category": "everdev-se",
                 "title": "Delete SE from list"
             },
             {
-                "command": "tondev.network.add",
-                "category": "tondev-network",
+                "command": "everdev.network.add",
+                "category": "everdev-network",
                 "title": "Add net"
             },
             {
-                "command": "tondev.network.delete",
-                "category": "tondev-network",
+                "command": "everdev.network.delete",
+                "category": "everdev-network",
                 "title": "Delete network from registry"
             },
             {
-                "command": "tondev.network.list",
-                "category": "tondev-network",
+                "command": "everdev.network.list",
+                "category": "everdev-network",
                 "title": "Prints list of networks"
             },
             {
-                "command": "tondev.network.info",
-                "category": "tondev-network",
+                "command": "everdev.network.info",
+                "category": "everdev-network",
                 "title": "Prints network detailed information"
             },
             {
-                "command": "tondev.network.default",
-                "category": "tondev-network",
+                "command": "everdev.network.default",
+                "category": "everdev-network",
                 "title": "Set default network"
             },
             {
-                "command": "tondev.network.giver",
-                "category": "tondev-network",
+                "command": "everdev.network.giver",
+                "category": "everdev-network",
                 "title": "Set giver for network"
             },
             {
-                "command": "tondev.signer.generate",
-                "category": "tondev-signer",
+                "command": "everdev.signer.generate",
+                "category": "everdev-signer",
                 "title": "Add signer with randomly generated keys"
             },
             {
-                "command": "tondev.signer.add",
-                "category": "tondev-signer",
+                "command": "everdev.signer.add",
+                "category": "everdev-signer",
                 "title": "Add signer"
             },
             {
-                "command": "tondev.signer.delete",
-                "category": "tondev-signer",
+                "command": "everdev.signer.delete",
+                "category": "everdev-signer",
                 "title": "Delete signer from registry"
             },
             {
-                "command": "tondev.signer.list",
-                "category": "tondev-signer",
+                "command": "everdev.signer.list",
+                "category": "everdev-signer",
                 "title": "Prints list of registered signers"
             },
             {
-                "command": "tondev.signer.info",
-                "category": "tondev-signer",
+                "command": "everdev.signer.info",
+                "category": "everdev-signer",
                 "title": "Get signer detailed information"
             },
             {
-                "command": "tondev.signer.default",
-                "category": "tondev-signer",
+                "command": "everdev.signer.default",
+                "category": "everdev-signer",
                 "title": "Set default signer"
             },
             {
-                "command": "tondev.contract.info",
-                "category": "tondev-contract",
+                "command": "everdev.contract.info",
+                "category": "everdev-contract",
                 "title": "Prints contract summary"
             },
             {
-                "command": "tondev.contract.topup",
-                "category": "tondev-contract",
+                "command": "everdev.contract.topup",
+                "category": "everdev-contract",
                 "title": "Top up account from giver"
             },
             {
-                "command": "tondev.contract.deploy",
-                "category": "tondev-contract",
+                "command": "everdev.contract.deploy",
+                "category": "everdev-contract",
                 "title": "Deploy contract to network"
             },
             {
-                "command": "tondev.contract.run",
-                "category": "tondev-contract",
+                "command": "everdev.contract.run",
+                "category": "everdev-contract",
                 "title": "Run contract deployed on the network"
             },
             {
-                "command": "tondev.contract.run-local",
-                "category": "tondev-contract",
+                "command": "everdev.contract.run-local",
+                "category": "everdev-contract",
                 "title": "Run contract locally on TVM"
             },
             {
-                "command": "tondev.contract.run-executor",
-                "category": "tondev-contract",
+                "command": "everdev.contract.run-executor",
+                "category": "everdev-contract",
                 "title": "Emulate transaction executor locally on TVM"
             },
             {
-                "command": "tondev.js.create",
-                "category": "tondev-js",
+                "command": "everdev.js.create",
+                "category": "everdev-js",
                 "title": "Create FreeTON JS App"
             },
             {
-                "command": "tondev.js.demo",
-                "category": "tondev-js",
+                "command": "everdev.js.demo",
+                "category": "everdev-js",
                 "title": "Download FreeTON Demo"
             },
             {
-                "command": "tondev.js.wrap",
-                "category": "tondev-js",
+                "command": "everdev.js.wrap",
+                "category": "everdev-js",
                 "title": "Wrap ABI file into JavaScript code."
             },
             {
-                "command": "tondev.tonos-cli.install",
-                "category": "tondev-tonos-cli",
+                "command": "everdev.tonos-cli.install",
+                "category": "everdev-tonos-cli",
                 "title": "Install latest stable TON OS CLI"
             },
             {
-                "command": "tondev.tonos-cli.set",
-                "category": "tondev-tonos-cli",
+                "command": "everdev.tonos-cli.set",
+                "category": "everdev-tonos-cli",
                 "title": "Change installed version"
             },
             {
-                "command": "tondev.tonos-cli.version",
-                "category": "tondev-tonos-cli",
+                "command": "everdev.tonos-cli.version",
+                "category": "everdev-tonos-cli",
                 "title": "Show installed and available versions"
             },
             {
-                "command": "tondev.tonos-cli.update",
-                "category": "tondev-tonos-cli",
+                "command": "everdev.tonos-cli.update",
+                "category": "everdev-tonos-cli",
                 "title": "Update to the latest version"
             },
             {
-                "command": "tondev.ts4.version",
-                "category": "tondev-ts4",
+                "command": "everdev.ts4.version",
+                "category": "everdev-ts4",
                 "title": "Show installed and available versions"
             },
             {
-                "command": "tondev.ts4.install",
-                "category": "tondev-ts4",
+                "command": "everdev.ts4.install",
+                "category": "everdev-ts4",
                 "title": "Install a specific release of TestSuite4"
             },
             {
-                "command": "tondev.ts4.update",
-                "category": "tondev-ts4",
+                "command": "everdev.ts4.update",
+                "category": "everdev-ts4",
                 "title": "Update to the latest version"
             },
             {
-                "command": "tondev.ts4.create",
-                "category": "tondev-ts4",
+                "command": "everdev.ts4.create",
+                "category": "everdev-ts4",
                 "title": "Create TestSuite4 test"
             },
             {
-                "command": "tondev.ts4.run",
-                "category": "tondev-ts4",
+                "command": "everdev.ts4.run",
+                "category": "everdev-ts4",
                 "title": "Run TestSuite4's test"
             },
             {
-                "command": "tondev.debrowser.version",
-                "category": "tondev-debrowser",
+                "command": "everdev.debrowser.version",
+                "category": "everdev-debrowser",
                 "title": "Show DeBrowser Versions"
             },
             {
-                "command": "tondev.debrowser.start",
-                "category": "tondev-debrowser",
+                "command": "everdev.debrowser.start",
+                "category": "everdev-debrowser",
                 "title": "Start ExtraTON DeBrowser, default is 'latest'"
             },
             {
-                "command": "tondev.debrowser.stop",
-                "category": "tondev-debrowser",
+                "command": "everdev.debrowser.stop",
+                "category": "everdev-debrowser",
                 "title": "Stop ExtraTON DeBrowser"
             },
             {
-                "command": "tondev.debrowser.interfaces",
-                "category": "tondev-debrowser",
+                "command": "everdev.debrowser.interfaces",
+                "category": "everdev-debrowser",
                 "title": "Show list of implemented interfaces"
             }
         ],
@@ -344,78 +350,83 @@
             "explorer/context": [
                 {
                     "when": "explorerResourceIsFolder",
-                    "command": "tondev.clang.create",
-                    "group": "TONDev"
+                    "command": "everdev.clang.create",
+                    "group": "EverDev"
                 },
                 {
                     "when": "resourceFilename =~ /\\.cpp$/i",
-                    "command": "tondev.clang.compile",
-                    "group": "TONDev"
+                    "command": "everdev.clang.compile",
+                    "group": "EverDev"
                 },
                 {
                     "when": "explorerResourceIsFolder",
-                    "command": "tondev.sol.create",
-                    "group": "TONDev"
+                    "command": "everdev.sol.create",
+                    "group": "EverDev"
                 },
                 {
                     "when": "resourceFilename =~ /\\.sol$/i",
-                    "command": "tondev.sol.compile",
-                    "group": "TONDev"
+                    "command": "everdev.sol.compile",
+                    "group": "EverDev"
+                },
+                {
+                    "when": "resourceFilename =~ /\\.sol$/i",
+                    "command": "everdev.sol.ast",
+                    "group": "EverDev"
                 },
                 {
                     "when": "resourceFilename =~ /\\.abi$|\\.abi\\.json$|\\.tvc$/i",
-                    "command": "tondev.contract.info",
-                    "group": "TONDev"
+                    "command": "everdev.contract.info",
+                    "group": "EverDev"
                 },
                 {
                     "when": "resourceFilename =~ /\\.abi$|\\.abi\\.json$|\\.tvc$/i",
-                    "command": "tondev.contract.topup",
-                    "group": "TONDev"
+                    "command": "everdev.contract.topup",
+                    "group": "EverDev"
                 },
                 {
                     "when": "resourceFilename =~ /\\.abi$|\\.abi\\.json$|\\.tvc$/i",
-                    "command": "tondev.contract.deploy",
-                    "group": "TONDev"
+                    "command": "everdev.contract.deploy",
+                    "group": "EverDev"
                 },
                 {
                     "when": "resourceFilename =~ /\\.abi$|\\.abi\\.json$|\\.tvc$/i",
-                    "command": "tondev.contract.run",
-                    "group": "TONDev"
+                    "command": "everdev.contract.run",
+                    "group": "EverDev"
                 },
                 {
                     "when": "resourceFilename =~ /\\.abi$|\\.abi\\.json$|\\.tvc$/i",
-                    "command": "tondev.contract.run-local",
-                    "group": "TONDev"
+                    "command": "everdev.contract.run-local",
+                    "group": "EverDev"
                 },
                 {
                     "when": "resourceFilename =~ /\\.abi$|\\.abi\\.json$|\\.tvc$/i",
-                    "command": "tondev.contract.run-executor",
-                    "group": "TONDev"
+                    "command": "everdev.contract.run-executor",
+                    "group": "EverDev"
                 },
                 {
                     "when": "explorerResourceIsFolder",
-                    "command": "tondev.js.create",
-                    "group": "TONDev"
+                    "command": "everdev.js.create",
+                    "group": "EverDev"
                 },
                 {
                     "when": "explorerResourceIsFolder",
-                    "command": "tondev.js.demo",
-                    "group": "TONDev"
+                    "command": "everdev.js.demo",
+                    "group": "EverDev"
                 },
                 {
                     "when": "resourceFilename =~ /\\.abi\\.json$/i",
-                    "command": "tondev.js.wrap",
-                    "group": "TONDev"
+                    "command": "everdev.js.wrap",
+                    "group": "EverDev"
                 },
                 {
                     "when": "explorerResourceIsFolder",
-                    "command": "tondev.ts4.create",
-                    "group": "TONDev"
+                    "command": "everdev.ts4.create",
+                    "group": "EverDev"
                 },
                 {
                     "when": "resourceFilename =~ /\\.py$/i",
-                    "command": "tondev.ts4.run",
-                    "group": "TONDev"
+                    "command": "everdev.ts4.run",
+                    "group": "EverDev"
                 }
             ]
         }
@@ -430,7 +441,7 @@
         "test": "node ./out/test/runTest.js"
     },
     "dependencies": {
-        "tondev": "^0",
+        "everdev": "^1",
         "@tonclient/core": "^1",
         "@tonclient/lib-node": "^1"
     },
