@@ -70,7 +70,7 @@ async function downloadTonClient(platform: string, arch: string) {
         process.stdout.write("Already exists. Skipped.");
     } else {
         await downloadAndGunzip(
-            `${libNodePath}/tonclient.${platform}.node`,
+            `${libNodePath}/tonclient.${platform}.${arch}.node`,
             `https://binaries.tonlabs.io/tonclient_1_nodejs_addon_${arch}-${platform}.gz`,
         );
     }
