@@ -2,6 +2,10 @@
 
 All the notable changes to the "TONDEV" VS Code extension will be documented in this file.
 
+## [1.0.1] 2022-01-21
+### Fixed
+- Problem with commands `sign` and `contract`
+
 ## [1.0.0] 2022-01-20
 ### New
 Renamed plugin to `everdev-vscode` and use `everdev`.
