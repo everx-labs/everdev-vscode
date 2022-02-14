@@ -2,6 +2,15 @@
 
 All the notable changes to the "TONDEV" VS Code extension will be documented in this file.
 
+## [1.1.1] - 2022-02-11
+### Fixed
+ - An error "TON Client binary bridge is not set"  that occurred when using `js wrap` command as a module
+
+### Improved
+ -  Command parameter parsing when using tondev as a module. 
+    Now, when some unrecognized option is found, an error occurs.
+    Previously unrecognized option was silently skipped.
+
 ## [1.0.1] 2022-01-21
 ### Fixed
 - Problem with commands `sign` and `contract`
