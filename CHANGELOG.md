@@ -2,6 +2,17 @@
 
 All the notable changes to the "TONDEV" VS Code extension will be documented in this file.
 
+## [1.2.1] - 2022-05-30
+### New
+- Add new option `--type` to the `everdev network giver` command.
+
+### Improved
+- For "everdev sol compile" and "everdev clang compile" commands, you can specify a variable number of input files.
+
+### Fixed
+ - Updated Ever OS Cloud endpoints.
+ - Updated the C++ contract example for use with the latest (7.7.35) clang compiler.
+
 ## [1.1.1] - 2022-02-11
 ### Fixed
  - An error "TON Client binary bridge is not set"  that occurred when using `js wrap` command as a module

@@ -61,7 +61,7 @@ function downloadAndGunzip(dest: string, url: string): Promise<void> {
     });
 }
 
-const libNodePath = path.resolve(__dirname, "..", "node_modules", "@tonclient", "lib-node");
+const libNodePath = path.resolve(__dirname, "..", "node_modules", "@eversdk", "lib-node");
 
 async function downloadTonClient(platform: string, arch: string) {
     process.stdout.write(`Downloading tonclient.${platform}.${arch}.node... `);
